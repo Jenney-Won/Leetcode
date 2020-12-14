@@ -30,3 +30,17 @@ class Solution {
         
     }
 }
+
+//OR do this 12/13/20
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int index = 1;
+        for(int i=0; i<nums.length-1; i++){
+            if(nums[index-1] != nums[i+1]){
+                nums[index] = nums[i+1];
+                index++;
+            }
+        }
+        return index;
+    }
+}
